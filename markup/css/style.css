@@ -1,0 +1,443 @@
+:root {
+  --background-color: #222629;
+  --dark-color: #000;
+  --dark-color-2: #272822;
+  --green-color: #618930;
+  --green-color-2: #87C232;
+  --light-color: #fff;
+  --light-color-2: #F5F5F5;
+}
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+  height: 100%;
+}
+html {
+  overflow: hidden;
+}
+body, .header, .menu-btn-drop, .list-socials, .container, .menu-projects, .footer {
+  background: var(--background-color);
+}
+.markup-dev-block pre, .skills-block h2, .experience-block .experience pre, .experience-block .experience p, .menu-nav-block .menu-nav li a, .menu-nav-block .email a, .experience-block .certificate a:hover {
+  color: var(--dark-color-2);
+}
+.skills-block .skills .skills-percent .skills-progress {
+  background: var(--green-color);
+}
+.switch-lang .active, .menu-btn .line, .markup-dev-block span, .experience-block .experience span, .experience-block span, .experience-block a, .experience-block .experience span, .experience-block span, .experience-block a, .markup-dev-block .scroll, .dropmenu .img-2-block .scroll, .dropmenu .menu-projects .scroll, .menu-projects .projects span, .menu-projects .projects span a, .footer .email p, .menu-markup-dev span, .footer .email span a:hover {
+  color: var(--green-color-2);
+}
+.menu-projects .projects h3, .name p, .switch-lang li, .switch-lang li a, .footer .number span, .meet-block .scroll p, .menu-projects h3, .footer .email span, .footer .email span a {
+  color: var(--light-color);
+}
+.wrapper, .menu-btn-drop, .list-socials, .container, .menu-drop-container {
+  min-height: 100vh;
+}
+.wrapper, .header, .switch-lang, .list-socials, .container, .container-body, .scroll, .markup-dev-block, .skills-block .skills, .menu-projects, .experience-block, .footer, .menu-drop-container, .menu-container-body, .menu-nav-block, .menu-markup-dev {
+  display: flex;
+}
+.wrapper, .list-socials, .container-body, .scroll {
+  flex-direction: column;
+}
+.header, .menu-btn-drop, .menu-btn .line, .list-socials {
+  position: fixed;
+}
+.header {
+  width: 100%;
+  height: 80px;
+  padding: 0 80px 16px;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 999;
+}
+.name p, .switch-lang li, .switch-lang li a, .footer .number span {
+  font: 18px 'Raleway', sans-serif;
+}
+.switch-lang li a {
+  text-decoration: none;
+}
+.img-2-block, .menu-btn {
+  cursor: pointer;
+}
+.menu-btn {
+  transition: 0.5s;
+}
+.menu-btn-drop {
+  top: 0;
+  left: 0;
+  width: 160px;
+  transform: translateX(-100%);
+  transition: 0.5s;
+  z-index: 997;
+}
+.menu-btn:hover .menu-btn-drop {
+  transform: translateX(0);
+  transition: 0.5s;
+}
+.menu-btn:hover .line {
+  width: 40px;
+}
+.menu-btn.active {
+  padding-left: 6px;
+}
+.menu-btn.active:hover .line {
+  width: 48px;
+}
+.menu-btn.active .menu-btn-drop {
+  transform: translateX(0);
+}
+.menu-btn .line {
+  width: 48px;
+  height: 5px;
+  background: var(--green-color-2);
+  display: block;
+  top: 50%;
+  left: 54px;
+  transition: 0.5s;
+  z-index: 999;
+}
+.menu-btn .line:nth-child(2) {
+  margin: 13px 0px 0px 8px;
+}
+.menu-btn .line:nth-child(3) {
+  margin-top: 26px;
+}
+.menu-btn.active .line:nth-child(1) {
+  opacity: 0;
+}
+.menu-btn.active .line:nth-child(2) {
+  margin: 13px;
+  top: 50%;
+  left: 6px;
+  background: var(--green-color-2);
+  transform: rotate(45deg);
+}
+.menu-btn.active .line:nth-child(3) {
+  margin: 13px;
+  top: 50%;
+  left: 6px;
+  background: var(--green-color-2);
+  transform: rotate(-45deg);
+}
+.menu-drop-container {
+  width: 100%;
+  padding: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+.menu-drop-container.active {
+  transform: translateX(0);
+  transition: 1s;
+}
+.scroll.active {
+  display: none;
+}
+.menu-container-body {
+  background: #f5f5f5;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+.menu-nav-block, .menu-markup-dev {
+  width: 50%;
+  height: 100%;
+  padding: 80px;
+  justify-content: center;
+  flex-direction: column;
+}
+.menu-nav-block {
+  background: var(--green-color);
+}
+.menu-nav-block .menu-nav, .menu-nav-block .number {
+  margin-bottom: 80px;
+}
+.menu-nav-block .menu-nav li {
+  margin-bottom: 32px;
+}
+.menu-nav-block .menu-nav li a, .menu-nav-block .email, .menu-nav-block .email a, .menu-markup-dev h2 {
+  font: bold 32px 'Barlow Condensed', sans-serif;
+}
+.menu-nav-block .menu-nav li a, .menu-nav-block .email a {
+  text-decoration: none;
+}
+.menu-nav-block .menu-nav li a, .menu-nav-block .email a {
+  /* <background-image> <background-position> / <background-size> <background-repeat> */
+  background: linear-gradient(var(--dark-color), var(--dark-color)) 0% 100% / 0% 2px no-repeat;
+  transition: background-size .3s;
+  padding-bottom: 5px;
+}
+.menu-nav-block .menu-nav li a:hover, .menu-nav-block .email a:hover {
+  color: var(--light-color-2);
+  background-size: 100% 2px;
+}
+.menu-nav-block .number {
+  font: 18px 'Raleway', sans-serif;
+  color: var(--light-color);
+}
+.menu-nav-block p {
+  color: var(--light-color);
+    margin-bottom: 16px;
+}
+.menu-markup-dev {
+  background: var(--light-color-2);
+}
+.menu-markup-dev {
+  transform: translateY(-100%);
+  transition: 2s;
+}
+.menu-markup-dev.active {
+  transform: translateY(0);
+  transition: 2s;
+}
+.menu-markup-dev h2 {
+  margin-bottom: 38px;
+}
+.menu-markup-dev p {
+
+}
+.list-socials, .container-body {
+  justify-content: center;
+  align-items: center;
+}
+.list-socials {
+  width: 80px;
+  top: 0;
+  right: 0;
+  z-index: 998;
+}
+.list-socials li {
+  margin-bottom: 16px;
+}
+.list-socials li a svg path,
+.list-socials li a:hover svg path {
+transition: 0.5s;
+}
+.list-socials li a:hover svg path {
+  fill: var(--light-color-2);
+}
+.container-body {
+  position: relative;
+  flex: 1 1 auto;
+  margin: 80px;
+  z-index: 994;
+}
+.scroll {
+  position: absolute;
+  align-items: center;
+}
+.scroll p {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 20px;
+  transform: rotate(-90deg);
+}
+.meet-block .scroll {
+  right: 50%;
+  bottom: -10px;
+  z-index: 998;
+}
+.meet-block {
+  background: linear-gradient(to right, var(--green-color) 50%,  var(--light-color-2) 50%);
+}
+.meet-block .title-h1 {
+  font: bold 80px / 96px 'Barlow Condensed', sans-serif;
+}
+.markup-dev-block {
+  background: var(--light-color-2);
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 160px;
+}
+.markup-dev-block span, .experience-block .experience span, .experience-block span, .experience-block a, .experience-block .experience span, .experience-block span, .experience-block a {
+  font: italic 18px / 21px 'Raleway', sans-serif;
+}
+.markup-dev-block h2, .experience-block .experience h3, .menu-projects h3, .footer .email span, .footer .email span a {
+  font: bold 32px 'Barlow Condensed', sans-serif;
+}
+.markup-dev-block h2, .menu-projects h3, .menu-projects .projects p {
+  color: var(--dark-color);
+  margin-bottom: 38px;
+}
+.markup-dev-block pre {
+  font: 32px /38px 'Raleway', sans-serif;
+}
+.markup-dev-block .scroll, .dropmenu .img-2-block .scroll, .dropmenu .menu-projects .scroll {
+  bottom: -10px;
+  left: 15px;
+  width: 10px;
+}
+.markup-dev-block .scroll svg path, .dropmenu .img-2-block .scroll svg path, .dropmenu .menu-projects .scroll svg path  {
+  fill: var(--green-color-2);
+}
+.img-1-block {
+  /* <background-image> <background-position> / <background-size> <background-repeat> */
+  background: url(../img/img1.png) center / auto no-repeat;
+}
+.skills-block, .menu-projects, .experience-block {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.skills-block {
+  padding: 80px;
+  background: var(--light-color);
+}
+.skills, .skills-block h2 {
+  margin-bottom: 32px;
+}
+.skills-block .skills {
+  align-items: center;
+  width: 100%;
+}
+.skills-block h2, .experience-block h2, .menu-projects h2 {
+  font: bold 80px 'Barlow Condensed', sans-serif;
+}
+.skills-block .skills span {
+  font: 32px 'Raleway', sans-serif;
+  width: 300px;
+  margin-right: 80px;
+}
+.skills-block .skills .skills-percent {
+  position: relative;
+  width: 700px;
+  height: 14px;
+  margin-left: 80px;
+}
+.skills-block .skills .skills-percent .skills-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  animation: animate 4s ease-in-out forwards;
+}
+@keyframes animate {
+  from {
+    width: 14px;
+  }
+}
+.dropmenu {
+  position: relative;
+}
+.img-2-block {
+  /* <background-image> <background-position> / <background-size> <background-repeat> */
+  background: url(../img/img2.png) center / auto no-repeat;
+  position: relative;
+}
+.menu-projects, .experience-block {
+  padding: 80px;
+}
+.menu-projects {
+  position: absolute;
+  flex-direction: column;
+  margin: 80px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateX(-100%);
+  z-index: 995;
+}
+.projects, .experience-block .experience {
+  margin-top: 80px;
+}
+.projects {
+  width: 600px;
+}
+.menu-projects h2 {
+  color: var(--green-color);
+}
+.menu-projects .projects a:hover {
+  color: var(--light-color);
+}
+.experience-block .experience pre, .experience-block .experience p, .menu-projects .projects p, .menu-markup-dev p {
+  font: 32px / 38px 'Raleway', sans-serif;
+}
+.menu-projects .projects p {
+  color: var(--light-color-2);
+}
+.menu-projects .projects span, .menu-projects .projects span a, .menu-nav-block p, .menu-markup-dev span {
+  font: italic 18px 'Raleway', sans-serif;
+}
+.menu-projects.active-projects {
+  transition: 1s;
+  transform: translateX(0);
+}
+.experience-block {
+  background: var(--light-color);
+}
+.experience-block span {
+  margin-top: 45px;
+}
+.footer {
+  margin: 0 80px 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .email p {
+  font: italic 18px 'Roboto', sans-serif;
+  margin-bottom: 21px;
+}
+.footer .email span, .footer .email span a {
+  text-decoration: none;
+}
+.footer .email span a {
+  background: linear-gradient(var(--light-color-2), var(--light-color-2)) 0% 100% / 0% 2px no-repeat;
+  transition: background-size .3s;
+  padding-bottom: 5px;
+}
+.footer .email span a:hover {
+  background-size: 100% 2px;
+}
