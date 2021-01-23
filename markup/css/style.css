@@ -261,6 +261,10 @@ body, .header, .menu-btn-drop, .list-socials, .container, .menu-projects, .foote
 .list-socials li {
   margin-bottom: 16px;
 }
+.list-socials svg path {
+  height: 24px;
+  width: 24px;
+}
 .list-socials li a svg path,
 .list-socials li a:hover svg path {
 transition: 0.5s;
@@ -318,7 +322,7 @@ transition: 0.5s;
   left: 15px;
   width: 10px;
 }
-.markup-dev-block .scroll svg path, .dropmenu .img-2-block .scroll svg path, .dropmenu .menu-projects .scroll svg path  {
+.list-socials svg path, .markup-dev-block .scroll svg path, .dropmenu .img-2-block .scroll svg path, .dropmenu .menu-projects .scroll svg path  {
   fill: var(--green-color-2);
 }
 .img-1-block {
