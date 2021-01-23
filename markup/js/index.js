@@ -58,7 +58,7 @@ $(function() {
 		isAnimating = true;
 		$('html, body').animate({
 			scrollTop: parseInt( scroll[currentScroll] )
-		}, 0, 'swing', function() {
+		}, 500, 'swing', function() {
 			isAnimating  = false;
 		});
 	});
